@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ice coffe</title>
+    <style>
+        @font-face {
+            font-family: 'saira';
+            src: url(./fonts/Ubuntu-Regular.ttf)
+        }
+
+        @font-face {
+            font-family: 'tang';
+            src: url(./fonts/Tangerine-Regular.ttf)
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            color: #D4A373;
+            list-style: none;
+            text-decoration: none;
+            transition: all .2s linear;
+            font-family: 'saira';
+        }
+
+        h1::selection {
+            background-color: #D4A373;
+        }
+
+        p::selection {
+            background-color: #99582A;
+        }
+
+        body {
+            height: 200vh;
+        }
+
+        .top {
+            background-image: url(./images/cover7.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .page {
+            display: grid;
+            grid-template-rows: auto auto;
+        }
+
+        .header,
+        .home {
+            background-color: #fef2b66e;
+        }
+
+        .about {
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .home .about h1 {
+            color: #99582A;
+        }
+
+        .home .about p {
+            text-transform: capitalize;
+            color: black;
+        }
+
+        .home .about button {
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            background-color: #99582A;
+            transition: all .2s linear;
+        }
+
+        .home .about button:hover {
+            transform: scale(1.1, 1.1);
+            background-color: #D4A373;
+        }
+
+        .home .about button a {
+            color: #FEFAE0;
+        }
+
+        .header .logo {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .header {
+            display: grid;
+            grid-template-columns: auto minmax(300px, 1fr);
+            justify-content: space-around;
+            align-items: center;
+            padding: 0 20px;
+            gap: 15px;
+        }
+
+        .header .links {
+            margin: 0 auto;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px #ffeba6, 0 5px 10px #ffeba6;
+            background-color: #fef2b69e;
+        }
+
+        .header .links ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 35px;
+            align-items: center;
+        }
+
+        .header .links ul a {
+            color: #99582A;
+            text-transform: capitalize;
+        }
+
+        .header .links ul li a:hover {
+            font-size: 18px;
+        }
+
+        .body {
+            display: grid;
+            grid-template-rows: auto auto;
+        }
+
+        .top .home {
+            display: grid;
+            grid-template-columns: auto;
+            justify-content: start;
+            align-items: center;
+
+        }
+
+        .top .home .about_image {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 37px;
+            margin-top: 20px;
+        }
+
+        .top .home .about_image img {
+            transform: rotate(-30deg);
+            animation: img-rotate 1s linear 1;
+        }
+
+        @keyframes img-rotate {
+            0% {
+                transform: rotate(0);
+            }
+
+            100% {
+                transform: rotate(-30deg);
+            }
+        }
+
+        .top .home .about {
+            padding: 30px;
+        }
+
+        .top .home .about h1 {
+            font-size: 120px;
+            font-family: 'tang';
+            margin-bottom: 10px;
+        }
+
+        .body .products {
+            padding: 25px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 250px));
+            justify-content: center;
+            background-color: #ffff;
+            gap: 20px;
+            margin: 30px 0;
+        }
+
+        .body .products .item {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            gap: 10px;
+            padding: 15px;
+            background-color: #ffff;
+            border: solid 2px #fef2b6;
+            border-radius: 12px;
+        }
+
+        .body .products .item::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background-color: #fef2b6;
+            border-radius: 8px 8px 0 0;
+        }
+
+        .body .products .item>img {
+            border: solid 5px #fff;
+        }
+
+        .body .products .item h3 {
+            color: black;
+            text-transform: capitalize;
+        }
+
+        .body .products .item button {
+            width: 100px;
+            height: 40px;
+            border-radius: 15px;
+            border: none;
+            background-color: #99582A;
+            transition: all .2s linear;
+            align-self: center;
+        }
+
+        .body .products .discount .price {
+            position: relative;
+            width: 150px;
+            margin: 0 auto 15px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transform-style: preserve-3d;
+            transition: all .8s linear;
+            font-weight: bold;
+        }
+
+        .body .products .item span {
+            font-weight: bold;
+        }
+
+        .body .products .discount .price .oldPrice {
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-decoration-line: line-through;
+            backface-visibility: hidden;
+            transition: all .5s linear;
+            background-color: rgb(255, 254, 236);
+            background-color: #fef2b6;
+        }
+
+        .body .products .discount .price .newPrice {
+            top: 0;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            text-decoration-line: none;
+            transform: rotateY(180deg);
+            backface-visibility: hidden;
+            background-color: rgb(255, 254, 236);
+            background-color: #fef2b6;
+        }
+
+        .body .products .discount:hover .price {
+            transform: rotateY(-180deg);
+
+
+        }
+
+        .body .products .item button a {
+            color: #ffff;
+        }
+
+        .body .products .item button:hover {
+            transform: scale(1.1, 1.1);
+            background-color: #D4A373;
+
+        }
+
+        .body dt {
+            font-weight: bolder;
+        }
+
+        .body .products .item>img {
+            border-radius: 50%;
+            width: 120px;
+            height: 120px;
+            align-self: center;
+            z-index: 2;
+        }
+
+        .body .products .item>img:hover {
+            transform: scale(1.09, 1.09);
+
+        }
+
+        @media(min-width:550px) and (max-width:930px) {
+            .top .home .about_image {
+                margin-top: 50px;
+            }
+
+            .top .home {
+                overflow: hidden;
+            }
+        }
+
+        @media(max-width:550px) {
+            .header {
+                position: relative;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 300px));
+                justify-content: start;
+                align-items: start;
+                transition: all 2s linear;
+                background-color: #ffeba6;
+                background-color: rgb(255, 254, 236);
+            }
+
+            .header .links {
+                box-shadow: unset;
+                border: unset;
+                border-radius: unset;
+                background-color: transparent;
+                display: grid;
+                gap: 40px;
+                align-items: center;
+                justify-content: start;
+            }
+
+            .header .links ul {
+                display: none;
+            }
+
+            .header:hover .links ul {
+                display: flex;
+                flex-direction: column;
+                justify-content: start;
+            }
+
+            .top .home .about h1 {
+                font-size: 100px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+        <div class="top">
+            <div class="header">
+                <div class="logo">
+                    <img src="./icons/20250425_095909.png" alt="" width="100px">
+                </div>
+                <div class="links">
+                    <ul>
+                        <li><a href="test.html#home" target="_blank">home</a></li>
+                        <li><a href="test.html#categories" target="_blank">Menu</a></li>
+                        <li><a href="test.html#about" target="_blank">About</a></li>
+                        <li><a href="test.html#footer" target="_blank">footer</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="home" id="home">
+                <div class="about">
+                    <h1>Viva Caffe</h1>
+                    <p>experience the rich and bold flavors of our exquisite coffe blends,<br> crafted to awaken your senses
+                        and start your day right</p>
+                    <button><a href="#">book a table</a></button>
+                </div>
+            </div>
+        </div>
+        <div class="body">
+            <div class="products">
+                <div class="item">
+                    <img src="./images/iced esspresso.jpg" alt="">
+                    <h3>iced Americano</h3>
+                    <dt>Ingredients:</dt>
+                    <dl>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis!</dl>
+                    <span>8$</span>
+                    <div>
+                        <img src="./icons/star-solid-24.png" alt=""><img src="./icons/star-solid-24.png" alt=""><img
+                            src="./icons/star-solid-24.png" alt=""><img src="./icons/star-half-solid-24.png" alt=""><img
+                            src="./icons/star-regular-24.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/iced2.jpg" alt="">
+                    <h3>iced Coffe Milk</h3>
+                    <dt>Ingredients:</dt>
+                    <dl>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis!</dl>
+                    <span>12$</span>
+                    <div>
+                        <img src="./icons/star-solid-24.png" alt=""><img src="./icons/star-solid-24.png" alt=""><img
+                            src="./icons/star-solid-24.png" alt=""><img src="./icons/star-half-solid-24.png" alt=""><img
+                            src="./icons/star-regular-24.png" alt="">
+                    </div>
+                </div>
+                <div class="item discount">
+                    <img src="./images/iced3.jpg" alt="">
+                    <h3>iced espresso</h3>
+                    <dt>Ingredients:</dt>
+                    <dl>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis!</dl>
+                    <div class="price">
+                        <div class="oldPrice">12$</div>
+                        <div class="newPrice">7$</div>
+                    </div>
+                    <div>
+                        <img src="./icons/star-solid-24.png" alt=""><img src="./icons/star-solid-24.png" alt=""><img
+                            src="./icons/star-solid-24.png" alt=""><img src="./icons/star-half-solid-24.png" alt=""><img
+                            src="./icons/star-regular-24.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/iced1.jpg" alt="">
+                    <h3>iced cappuccino</h3>
+                    <dt>Ingredients:</dt>
+                    <dl>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis!</dl>
+                    <span>6$</span>
+                    <div>
+                        <img src="./icons/star-solid-24.png" alt=""><img src="./icons/star-solid-24.png" alt=""><img
+                            src="./icons/star-solid-24.png" alt=""><img src="./icons/star-half-solid-24.png" alt=""><img
+                            src="./icons/star-regular-24.png" alt="">
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="./images/icemilk.jpg" alt="">
+                    <h3>iced milk</h3>
+                    <dt>Ingredients:</dt>
+                    <dl>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, officiis!</dl>
+                    <span>4$</span>
+                    <div>
+                        <img src="./icons/star-solid-24.png" alt=""><img src="./icons/star-solid-24.png" alt=""><img
+                            src="./icons/star-solid-24.png" alt=""><img src="./icons/star-half-solid-24.png" alt=""><img
+                            src="./icons/star-regular-24.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
