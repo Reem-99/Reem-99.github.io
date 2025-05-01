@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nerd Engineer</title>
+    <style>
+        @font-face {
+            font-family: 'ubuntu';
+            src: url(./fonts/Ubuntu-Regular.ttf);
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            transition: all .2s linear;
+            list-style: none;
+            text-decoration: none;
+            font-family: 'ubuntu';
+        }
+        body .page {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            height: 100vh;
+        }
+
+        body .page .sider {
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            width: fit-content;
+            padding: 20px;
+            height: 100vh;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: #ff354d;
+        }
+
+        body .page .sider ul {
+            border-radius: 12px;
+
+        }
+
+        body .page .sider ul li {
+            padding: 10px;
+        }
+
+        body .page .sider ul li {
+            margin-bottom: 20px;
+            color: #ffc8dd;
+        }
+
+        .page .container {
+            display: grid;
+            grid-template-rows: repeat(4, auto);
+            grid-column: 2;
+            gap: 20px;
+        }
+
+        .page .container .home {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .page .container .home .title h1 {
+            color: #ff354d;
+            font-size: 48px;
+        }
+
+        .page .container .home .title p {
+            color: #40c4ff;
+            font-size: 24px;
+            margin-top: 30px;
+        }
+
+        .page .container .about {
+            display: grid;
+            grid-template-rows: auto auto;
+            grid-template-columns: 60vw;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            gap: 20px;
+            white-space-collapse:preserve-breaks;
+        }
+
+        .page .container .about h2 {
+            color: #40c4ff;
+            color: #ff354d;
+            text-transform: capitalize;
+        }
+
+        .page .container .lectures {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .page .container .lectures h2 {
+            color: #40c4ff;
+            color: #ff354d;
+            margin-bottom: 40px;
+            text-transform: capitalize;
+        }
+
+        .page .container .lectures .years {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+            align-items: center;
+            justify-content: center;
+            gap: 40px;
+        }
+
+        .page .container .lectures .years .year {
+            padding: 10px;
+            text-align: start;
+            position: relative;
+            box-shadow: 0 14px 28px rgba(0, 0, 0, 0.1), 0 10px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .page .container .lectures .years .year::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 5px;
+            background-color: #ff354d;
+        }
+
+        .page .container .lectures .years .year:hover , .page .sider ul li:hover{
+            transform: scale(1.07,1.07);
+        }
+
+        .page .container .lectures .years .year h3 {
+            text-transform: capitalize;
+            color: black;
+            margin-bottom: 10px;
+        }
+
+        .page .container .lectures .years .year dt,.page .container .lectures .years .year dl {
+            color: gray;
+        }
+        .page .footer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;gap: 50px;
+            text-align: center;
+        }
+        .page .footer .contac{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+        }
+        .page .footer .contac .social{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 30px;
+        }
+        .page .footer .contac .social div{
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .page .footer .contac .social div img{
+            align-self: flex-start;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="page">
+        <div class="sider">
+            <ul>
+                <li>
+                    <a href="#home"><img src="./icons/home-alt-regular-36 (5).png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#about"><img src="./icons/group-regular-36 (8).png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#lectures"><img src="./icons/book-content-regular-36 (6).png" alt=""></a>
+                </li>
+                <li>
+                    <a href="#footer"><img src="./icons/phone-regular-36 (5).png" alt=""></a>
+                </li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="home" id="home">
+                <div class="img">
+                    <img src="./images/345952933.jpg" alt="" width="500px">
+                </div>
+                <div class="title">
+                    <h1>Nerd Engineer</h1>
+                    <p>the way to success start here</p>
+                </div>
+            </div>
+            <div class="about" id="about">
+                <h2>who are we ?</h2>
+                <p>A specialized team aims to form a bridge between the scientific lecture writing teams and students in the College of Information Engineering by formulating the scientific material in an accurate and simple manner and coordinating it so that the scientific material becomes accessible to everyone and easy to understand.</p>
+                <!-- <h3>our services</h3> -->
+                <!-- <div>
+                    <img src="" alt="">
+                    <h4>Lorem, ipsum dolor.</h4>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h4>Lorem, ipsum dolor.</h4>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h4>Lorem, ipsum dolor.</h4>
+                </div>
+                <div>
+                    <img src="" alt="">
+                    <h4>Lorem, ipsum dolor.</h4>
+                </div> -->
+            </div>
+            <div class="lectures" id="lectures">
+                <h2>go to study year</h2>
+                <div class="years">
+                    <a href="firstYear.html" target="_blank">
+                    <div class="year">
+                        <h3>first year</h3>
+                        <dt>count of availble subjects</dt>
+                        <dl>24/24</dl>
+                    </div>
+                </a>
+                <a href="firstYear.html" target="_blank">
+                    <div class="year">
+                        <h3>second year</h3>
+                        <dt>count of availble subjects</dt>
+                        <dl>24/24</dl>
+                    </div>
+                </a>
+                <a href="firstYear.html" target="_blank">
+                    <div class="year">
+                        <h3>third year</h3>
+                        <dt>count of availble subjects</dt>
+                        <dl>24/24</dl>
+                    </div>
+                </a>
+                <a href="firstYear.html" target="_blank">
+                    <div class="year">
+                        <h3>fourth year</h3>
+                        <dt>count of availble subjects</dt>
+                        <dl>24/24</dl>
+                    </div>
+                </a>
+                <a href="firstYear.html" target="_blank">
+                    <div class="year">
+                        <h3>fifth year</h3>
+                        <dt>count of availble subjects</dt>
+                        <dl>24/24</dl>
+                    </div>
+                </a>
+                </div>
+            </div>
+            <div class="footer" id="footer">
+                <div class="contac">
+                    <h3 style="color: #ff354d;">to keep update on our services and our news follow us on</h3>
+                    <div class="social">
+                    <div>
+                        <img src="./icons/facebook-circle-logo-48 (2).png" alt="">
+                        <h4 style="color: black;">facebook</h4>
+                    </div>
+                    <div>
+                        <img src="./icons/instagram-logo-48.png" alt="">
+                        <h4 style="color: black;">instgram</h4>
+                    </div>
+                    <div>
+                        <img src="./icons/whatsapp-logo-48.png" alt="">
+                        <h4 style="color: black;">watsapp</h4>
+                    </div>
+                </div>
+                </div>
+                <p style="text-transform: capitalize;">copyright @ 2025 web designer Reem gh , All rights reserved</p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

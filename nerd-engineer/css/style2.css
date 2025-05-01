@@ -1,0 +1,12 @@
+@media (max-width:450px) {
+
+    .page .container .lectures div .years {
+        grid-template-columns: minmax(200px,230px);
+        justify-content: center;
+    }
+    @media (min-width:551px){
+        .page .container .lectures div .years {
+            justify-content: center;
+        }
+    }
+}

@@ -1,0 +1,168 @@
+@media (min-width:551px) and (max-width:615px) {
+    .page .container{
+        /* justify-content: start; */
+        overflow-x: hidden;
+    }
+    .page .container .home .img img{
+        width: 300px;
+    }
+    .page .container .about {
+        white-space-collapse:preserve-breaks;
+        padding: 10px;
+        height: fit-content;
+        width: 75vw;
+        margin: auto;
+    }
+    .page .container .about p{
+        text-align: start;
+        white-space-collapse:preserve-breaks;
+    }
+    .page .container .lectures{
+        justify-content: start;
+        padding: 10px;
+    }
+    .page .container .lectures .years {
+        grid-template-columns: 400px;
+        justify-content: start;
+
+    }
+    .page .container .footer{
+        padding: 10px;
+    }
+}
+@media (max-width:505px) {
+    .page .container .home{
+        justify-content: start;
+        padding-left: 2px;
+    }
+    .page .container .home .title{
+        white-space-collapse: preserve-breaks;
+        text-align: start;
+        display: flex;
+        flex-direction: column;
+        padding: 15px;
+    }
+    .page .container .home .title h1{
+        font-size: 36px;
+    }
+    .page .container .home .title p{
+        font-size: 20px;
+    }
+    .page .container .home .img img{
+        width: 300px;
+    }
+}
+@media (max-width:950px) {
+    .page .container .home{
+        grid-template-columns: unset;
+    }
+}
+@media (min-width:450px) and (max-width:550px){
+    .page .container .home .title{
+        text-align: start;
+        padding: 5px;
+    }
+    .page .container .home .title h1{
+
+        font-size: 36px;
+    }
+    .page .container .home .title p{
+        font-size: 18px;
+    }
+    .page .container .home .img img{
+        width: 250px;
+    }
+    .page .container .about {
+        justify-content: start;
+        text-align: start;
+        padding: 10px;
+        white-space-collapse:preserve-breaks;
+    }
+    .page .container .about p{
+        white-space-collapse:preserve-breaks;
+    }
+    .page .container .lectures {
+        justify-content: start;
+        text-align: start;
+        padding: 5px;
+        white-space-collapse:preserve-breaks;
+    }
+    .page .container .footer {
+        justify-content: center;
+        text-align: center;
+        padding: 10px;
+        white-space-collapse:preserve-breaks;
+    }
+    .page .footer .contac {
+        justify-content: center;
+        white-space-collapse:preserve-breaks;
+    }
+    .page .footer .contac .social{
+        flex-direction: column;
+        justify-content: center;
+        align-self: center;
+    }
+    .page .container .lectures .years {
+        grid-template-columns: 300px;
+
+    }
+}
+@media (max-width:450px) {
+        .page .container .home .title{
+            text-align: start;
+            padding: 5px;
+        }
+        .page .container .home .title h1{
+
+            font-size: 36px;
+        }
+        .page .container .home .title p{
+            font-size: 18px;
+        }
+        .page .container .home .img img{
+            width: 250px;
+        }
+    }
+    @media (max-width:450px) {
+        .page .container .home .title h1{
+
+            font-size: 34px;
+        }
+        .page .container .home .title p{
+            font-size: 15px;
+        }
+        .page .container .about {
+            justify-content: start;
+            text-align: start;
+            padding: 10px;
+            white-space-collapse:preserve-breaks;
+        }
+        .page .container .about p{
+            white-space-collapse:preserve-breaks;
+        }
+        .page .container .lectures {
+            justify-content: start;
+            text-align: start;
+            padding: 5px;
+            white-space-collapse:preserve-breaks;
+        }
+        .page .container .footer {
+            justify-content: start;
+            text-align: start;
+            padding: 10px;
+            white-space-collapse:preserve-breaks;
+        }
+        .page .footer .contac {
+            justify-content: start;
+            white-space-collapse:preserve-breaks;
+        }
+        .page .footer .contac .social{
+            flex-direction: column;
+            justify-content: start;
+            align-self: start;
+        }
+        .page .container .lectures .years {
+            grid-template-columns: auto;
+
+        }
+    }
