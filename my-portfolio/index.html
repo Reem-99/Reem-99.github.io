@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reem Alghadban portfolio</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        @media (min-width:951px) and (max-width:1029px) {
+
+            .content .about .btn {
+                height: 40px;
+            }
+
+            .content .about .btn button {
+                padding: 0 10px;
+                width: 99%;
+                height: 95%;
+            }
+
+            .skills .components {
+                padding-right: 30px;
+            }
+        }
+
+        @media (min-width:751px) and (max-width:950px) {
+
+            /* content partioning */
+            .content {
+                grid-template-rows: auto auto auto;
+            }
+
+            /* home section styling */
+            .content .home {
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+                justify-content: center;
+            }
+
+            /* profile image styling */
+            .content .home .profile-img {
+                order: 1;
+                margin: 10px auto;
+            }
+
+            /* about me partioning */
+            .content .about {
+                order: 2;
+                text-align: center;
+            }
+
+            /* about me h1 styling */
+            .content .about h1 {
+                margin: 5px 0;
+                margin: 10px auto;
+            }
+
+            /* about me h1 styling */
+            .content .about p {
+                margin: 20px auto;
+                font-size: 20px;
+                margin-bottom: 5px;
+            }
+
+            /* about me button parent styling and buttons in projects section */
+            .content .about .btn {
+                margin: 5px auto;
+                padding-left: 1px;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* about me button styling and buttons in projects section */
+            .content .about .btn button {
+                width: 99%;
+                height: 91%;
+                cursor: pointer;
+            }
+
+            .skills {
+                width: 90%;
+                padding: 0 30px 30px 0;
+            }
+        }
+
+        @media (min-width:450px) and (max-width:750px) {
+
+            .header {
+                padding: unset;
+                -webkit-transition: .5s linear;
+                transition: .5s linear;
+            }
+
+            .header ul {
+                -webkit-transition: .5s linear;
+                transition: .5s linear;
+            }
+
+            .header ul li a {
+                font-size: 15px;
+            }
+
+            /* content section */
+            .content {
+                background-color: #22272c;
+                display: grid;
+                grid-template-rows: auto auto auto;
+                perspective: 300px;
+            }
+
+            /* home section styling */
+            .content .home {
+                display: grid;
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+                justify-content: center;
+                perspective: 300px;
+                border-bottom: solid 1px #a5158d1f;
+            }
+
+            /* profile image styling */
+            .content .home .profile-img .img {
+                /* background-color: #333; */
+                border-radius: 50%;
+                width: 400px;
+                height: 400px;
+                /* margin: 20px auto; */
+            }
+
+            .content .home .profile-img {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                order: 1;
+            }
+
+            /* about me partioning */
+            .content .about {
+                order: 2;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: unset;
+                margin-left: 10px;
+                perspective: 300px;
+                white-space-collapse: preserve-breaks;
+                text-align: center;
+            }
+
+            /* about me h1 styling */
+            .content .about h1 {
+                text-transform: capitalize;
+                margin: 5px 0;
+                font-size: 34px;
+            }
+
+            /* about me h1 styling */
+            .content .about p {
+                margin-top: 20px;
+                color: #FFDEDE;
+                font-size: 16px;
+                margin-bottom: 5px;
+            }
+
+            /* about me button parent styling and buttons in projects section */
+            .content .about .btn {
+                transform: translateY(30px);
+                border-radius: 12px;
+                background-color: red;
+                display: flex;
+                align-content: center;
+                width: 150px;
+                animation-name: btn-animation;
+                animation-duration: 2s;
+                animation-delay: .5s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                perspective: 300px;
+                box-shadow: 0px 0px 10px 7px #a633333a;
+                transition: all .2s linear;
+                margin: 5px auto;
+            }
+
+            /* about me button styling and buttons in projects section */
+            .content .about .btn button {
+                /* padding: 10px 10px; */
+                color: #FFB8E0;
+                background-color: #22272c;
+                width: 99%;
+                height: 90%;
+                letter-spacing: 1px;
+            }
+
+            /* about me button hover effect */
+            .content .about .btn:hover {
+                padding: 2px;
+                box-shadow: 0px 0px 10px 7px #c13838;
+            }
+
+
+            .skills {
+                margin: 10px;
+                width: unset;
+                padding: 10px 10px 30px 10px;
+            }
+
+            .skills h2 {
+                font-size: 26px;
+                text-align: start;
+                margin: auto;
+            }
+
+            .skills .components {
+                grid-template-columns: minmax(150px, 1fr);
+                grid-template-rows: repeat(5, auto);
+                margin-bottom: 5px;
+            }
+
+            .projects .container,
+            .projects .container .out {
+                width: unset;
+            }
+
+            .projects {
+                margin: unset;
+            }
+
+        }
+
+        @media (max-width:449px) {
+            .header {
+                padding: 0;
+            }
+
+            .content {
+                grid-template-rows: auto auto auto;
+                align-items: center;
+                justify-content: center;
+            }
+
+            /* home section styling */
+            .content .home {
+                grid-template-columns: auto;
+                grid-template-rows: auto auto;
+                overflow: hidden;
+            }
+
+            /* profile image styling */
+            .content .home .profile-img {
+                order: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+
+            .content .home .profile-img .img {
+                max-width: 300px;
+                max-height: 300px;
+            }
+
+            /* about me partioning */
+            .content .about {
+                order: 2;
+                justify-content: center;
+                align-items: center;
+                margin-left: 10px;
+                white-space-collapse: preserve-breaks;
+                text-align: center;
+                padding: 5px;
+            }
+
+            .skills {
+                margin: 10px;
+                width: unset;
+                padding: 10px 10px 20px 10px;
+            }
+
+            .skills h2 {
+                font-size: 26px;
+                text-align: start;
+                margin: auto;
+            }
+
+            .skills .components {
+                grid-template-columns: minmax(150px, 1fr);
+                grid-template-rows: repeat(5, auto);
+                margin-bottom: 5px;
+            }
+
+            .skills .components div {
+                padding-left: 10px;
+            }
+        }
+
+        @media (min-width:330px) and (max-width:599px) {
+
+            .header {
+                height: unset;
+                flex-wrap: wrap;
+                -webkit-transition: all 1s linear;
+                transition: all .5s linear;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            /* list of header links styling */
+            .header ul {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                -webkit-transition: .5s linear;
+                transition: .5s linear;
+                max-height: 0px;
+                position: relative;
+            }
+
+            .header ul li {
+                padding: 20px;
+                transition: all .5s linear;
+                position: relative;
+                left: -50%
+            }
+
+            #menue_icon {
+                display: block;
+            }
+
+            /* links of header styling */
+            .header ul li a {
+                font-size: 18px;
+
+            }
+
+            /* links of header hover effect */
+            .header ul li a:hover {
+                letter-spacing: 2px;
+            }
+
+            #header_menue {
+                transition: all .5s linear;
+            }
+        }
+
+        @media (max-width:390px) {
+
+            .footer {
+                overflow: hidden;
+            }
+             .header {
+                height: unset;
+                flex-wrap: wrap;
+                -webkit-transition: all 1s linear;
+                transition: all .5s linear;
+            }
+
+            .header h1 {
+                font-size: 34px;
+            }
+
+            /* list of header links styling */
+            .header ul {
+                flex-direction: column;
+                text-align: center;
+                width: 100%;
+                -webkit-transition: .5s linear;
+                transition: .5s linear;
+                max-height: 0px;
+                position: relative;
+            }
+
+            .header ul li {
+                padding: 20px;
+                transition: all .5s linear;
+                position: relative;
+                left: -50%
+            }
+
+            #menue_icon {
+                display: block;
+            }
+
+            /* links of header styling */
+            .header ul li a {
+                font-size: 18px;
+
+            }
+
+            /* links of header hover effect */
+            .header ul li a:hover {
+                letter-spacing: 2px;
+            }
+
+            #header_menue {
+                transition: all .5s linear;
+            }
+            
+        }
+        @media(max-width:670px){
+            .footer .contact .social{
+                flex-direction: column;
+                align-items: start;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--container of all content-->
+    <div class="page">
+        <!--header section-->
+        <div class="header">
+            <!--logo-->
+            <h1>Reem</h1>
+            <img src="./icons/menu-close (2).png" alt="" id="menue_icon" onclick="toggleMenue()">
+            <ul id="header_menue">
+                <!--page links-->
+                <li class="le"><a href="#home">Home</a></li>
+                <li class="le"><a href="#skills">Skills</a></li>
+                <li class="le"><a href="#projects">Projects</a></li>
+                <li class="le"><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+        <!--page body-->
+        <div class="content">
+            <!--home section-->
+            <div class="home" id="home">
+                <!--about me section-->
+                <div class="about" style="margin-bottom: 50px;">
+                    <!--about me heading-->
+                    <h1>I AM Reem Alghadban <br>A Software Engineer</h1>
+                    <!--about me paragraph-->
+                    <p>looking forward real-world experience ,intersted in learning more about development and designing
+                        web application and databases .</p>
+                    <!--about me button-->
+                    <div class="btn"><button><a href="Reem AlghadbanCV.pdf" download="ReemAlghadbanCV"
+                                target="_blank">Download CV</a></button></div>
+                </div>
+                <!--about me profile image-->
+                <div class="profile-img">
+                    <div class="img">
+                        <img src="./images/photo.png" alt=""
+                            style="display: block; width: 97%;height: 97%;border-radius: 50%;">
+                    </div>
+                </div>
+            </div>
+            <!--skills section-->
+            <div class="skills" id="skills"><!--skills open-->
+                <!--skills heading-->
+                <h2 style="grid-column:1/4;padding:20px;">MY SKILLS</h2>
+                <!--skills component --><!--copmponents open-->
+                <div class="components">
+                    <!--skills component 1-->
+                    <div class="skillTitle">
+                        <!--skills component heading-->
+                        <h3>programming languages</h3>
+                        <div>
+                            <!--skill heading-->
+                            <h4>java</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <!--skill progress shape--> <!--skill progrss value-->
+                                <span class="bar"><span class="java">
+                                    </span></span><!--<span class="value">90%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <!--skill h4-->
+                            <h4>C++</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <!--skill progress shape--> <!--skill progrss value-->
+                                <span class="bar"><span class="cpp"> </span></span><!--<span class="value">50%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <!--skill h4-->
+                            <h4>PHP</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <!--skill progress shape--> <!--skill progrss value-->
+                                <span class="bar"><span class="php"> </span></span><!--<span class="value">50%</span>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--skills component 2-->
+                    <div class="skillTitle">
+                        <!--skill 2 heading-->
+                        <h3>web development and design</h3>
+                        <div>
+                            <!--skill h4-->
+                            <h4>HTML</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <!--skill progress shape--> <!--skill progrss value-->
+                                <span class="bar"><span class="html">
+                                    </span></span><!--<span class="value">95%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <!--skill h4-->
+                            <h4>CSS</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <!--skill progress shape--> <!--skill progrss value-->
+                                <span class="bar"><span class="css"> </span></span><!--<span class="value">90%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <!--skill h4-->
+                            <h4>LARAVEL</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <!--skill progress shape--> <!--skill progrss value-->
+                                <span class="bar"><span class="Laravel">
+                                    </span></span><!--<span class="value">70%</span>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--skills component 3-->
+                    <div class="skillTitle">
+                        <h3>databases languages and design</h3>
+                        <div>
+                            <h4>MY SQL</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <span class="bar"><span class="mysql">
+                                    </span></span><!--<span class="value">60%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <h4>SQL SERVER</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <span class="bar"><span class="sqlserver">
+                                    </span></span><!--<span class="value">40%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <h4>ERD DESIGN</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <span class="bar"><span class="erd"> </span></span><!--<span class="value">70%</span>-->
+                            </div>
+                        </div>
+                    </div>
+                    <!--skills component 4-->
+                    <div class="skillTitle">
+                        <h3>others</h3>
+                        <div>
+                            <h4>TEAM WORKING</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <span class="bar"><span class="team-work">
+                                    </span></span><!--<span class="value">100%</span>-->
+                            </div>
+                        </div>
+                        <div>
+                            <h4>FAST LEARNING</h4>
+                            <div class="tech" style="display: flext; flex-direction: row;align-items: center;">
+                                <span class="bar"><span class="fast-learn"> </span></span><!--<span
+                                    class="value">100%</span>-->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--projects section-->
+            <div class="projects" id="projects" style="border-bottom: solid 1px #a5158d1f;">
+                <h2 style="grid-column:1/4;padding:20px;">MY PROJECTS</h2>
+                <div class="filter all">
+                    <img src="./icons/filter.png" alt="">
+                    <ul>
+                        <li id="all" onclick="filter(this.id)">All</li>
+                        <li id="frontend" onclick="filter(this.id)">Frontend</li>
+                        <li id="backend" onclick="filter(this.id)">Backend</li>
+                        <li id="desktop" onclick="filter(this.id)">Desktop GUI</li>
+                    </ul>
+                </div>
+                <!--all project container-->
+                <div class="container">
+                    <!--project-->
+                    <div class="out front">
+                        <div class="in">
+                            <!--project image-->
+                            <img class="project-img" src="./images/pharmacy.jpg" alt="">
+                            <div>
+                                <!--project heading-->
+                                <h3>pharmacy management system</h3>
+                                <!--project role span-->
+                                <span>Frontend developer (HTML5 CSS3 JS BOOTSRTAP)</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay1">about..</button>
+                            </div>
+                            <!--project details-->
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/pharmacy_management_system" target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <img src="./icons/eye (2).png" alt="" onclick="showPopup(this.classList[0])"
+                                    class="demo1">
+                                <div id="demo1" class="overlay ">
+                                    <div class="popup video-container" role="dialog" aria-modal="true">
+                                        <img src="./icons/x (3).png" alt="" class="demo1"
+                                            onclick="hidePopup(this.classList[0])">
+                                        <iframe loading="lazy" src="https://www.youtube.com/embed/RYEuWhyNKmw"
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay1" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay1"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>A multi role authenticated system : add , edit , delete (employee accounts and
+                                        medicines)
+                                        , sort and search medicines with different ways (scientific name , commercial
+                                        name
+                                        and chemical composition) ,
+                                        Warning before running out of medicine
+                                        Accounting</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out front">
+                        <div class="in">
+                            <img class="project-img" src="./images/viva-caffee.png" alt="">
+                            <div>
+                                <h3>Viva Caffe</h3>
+                                <span>Frontend developer (HTML5 CSS3)</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay2">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/Reem-99.github.io/tree/main/viva-caffe"
+                                    target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <a href="https://reem-99.github.io/viva-caffe/" target="_blank">
+                                    <img src="./icons/eye (2).png" alt="">
+                                </a>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay2" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay2"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>
+                                        Front end design for a virtual coffee shop that showcases my UI design skills
+                                        through visually appealing and easy to use interfaces with a consistent color
+                                        scheme and responsive design optimized for all screen sizes . it includes key
+                                        sections : Home, Menu, About, Book table, contact info with a dedicated pages
+                                        for each category to view products using visually consistent and attractive
+                                        cards with high quality images
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out front">
+                        <div class="in">
+                            <img class="project-img" src="./images/nerdEng3.png" alt="">
+                            <div>
+                                <h3>Nerd Engineer</h3>
+                                <span>Frontend developer(HTML5 CSS3)</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay3">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/Reem-99.github.io/tree/main/nerd-engineer"
+                                    target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <a href="https://reem-99.github.io/nerd-engineer/" target="_blank">
+                                    <img src="./icons/eye (2).png" alt="">
+                                </a>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay3" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay3"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>Responsive Frontend project utilizes a consistent color scheme and high quality
+                                        visuals to enhance user engagement targeting information technology Engineering
+                                        students that offers organized access to academic materials across five academic
+                                        years, each with full set of subjects <br>
+                                        users can download lecture in pdf format or request printed copy by sending the
+                                        lecture name via WhatsApp to the library account and this can be done with just
+                                        click a button that enhance accessibility and obtaining academic resources</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out back">
+                        <div class="in">
+                            <img class="project-img" src="./images/nn logo NEW.png" alt="">
+                            <div>
+                                <h3>Institute management system</h3>
+                                <span>Laravel backend developer</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay4">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/InistiteuMangement-System-" target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <img src="./icons/eye (2).png" alt="" onclick="showPopup(this.classList[0])"
+                                    class="demo4">
+                                <div id="demo4" class="overlay ">
+                                    <div class="popup video-container" role="dialog" aria-modal="true">
+                                        <img src="./icons/x (3).png" alt="" class="demo4"
+                                            onclick="hidePopup(this.classList[0])">
+                                        <iframe loading="lazy" src="https://www.youtube.com/embed/p9NkbSUvfoI"
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay4" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay4"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>A multi role authenticated system with
+                                        Control panel: allow managers to mange all different sections in institute
+                                        check attendance and
+                                        Send SMS to contact with students
+                                        Website: allow students to interact with institute</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out back">
+                        <div class="in">
+                            <img class="project-img" src="./images/sugC.png" alt="">
+                            <div>
+                                <h3>Syrian Guide Universities</h3>
+                                <span>Laravel backend developer</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay5">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/syrian_universities_guide" target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <img src="./icons/eye (2).png" alt="" onclick="showPopup(this.classList[0])"
+                                    class="demo5">
+                                <div id="demo5" class="overlay ">
+                                    <div class="popup video-container" role="dialog" aria-modal="true">
+                                        <img src="./icons/x (3).png" alt="" class="demo5"
+                                            onclick="hidePopup(this.classList[0])">
+                                        <iframe loading="lazy" src="https://www.youtube.com/embed/hMpecVSCuQc"
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay5" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay5"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>A multi role authenticated system with
+                                        Control panel: allow administrators to match between subjects and suitable
+                                        professors
+                                        Website: allow teachers to add their profiles to appear in searches</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out gui">
+                        <div class="in">
+                            <img class="project-img" src="./images/image coloring.png" alt="">
+                            <div>
+                                <h3>Filling Shapes in Image</h3>
+                                <span>Java Programmer</span>
+                                <!-- <a href="">about..</a> -->
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay6">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/draw_shapse_flood_fill" target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt="">
+                                </a>
+                                <!-- <button> -->
+                                <img src="./icons/eye (2).png" alt="" onclick="showPopup(this.classList[0])"
+                                    class="demo6">
+                                <div id="demo6" class="overlay ">
+                                    <div class="popup video-container" role="dialog" aria-modal="true">
+                                        <img src="./icons/x (3).png" alt="" class="demo6"
+                                            onclick="hidePopup(this.classList[0])">
+                                        <iframe loading="lazy" src="https://www.youtube.com/embed/2ZPxf7Oa-iU"
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay6" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay6"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>JavaFX programme enable you to load image from your device ,select a color from
+                                        color picker and change any shape's color in the image by clicking the mouse on
+                                        it then clicking "color image button"
+                                    <div class="br">The programme saves a copy of the image after changing on the
+                                        desktop.</div>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out gui">
+                        <div class="in">
+                            <img class="project-img" src="./images/vedioediting.jpeg" alt="">
+                            <div>
+                                <h3>Vedio editing and making</h3>
+                                <span>Java Programmer</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay7">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/video_maker_and_editor_ffmpeggrabber"
+                                    target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <img src="./icons/eye (2).png" alt="" onclick="showPopup(this.classList[0])"
+                                    class="demo7">
+                                <div id="demo7" class="overlay ">
+                                    <div class="popup video-container" role="dialog" aria-modal="true">
+                                        <img src="./icons/x (3).png" alt="" class="demo7"
+                                            onclick="hidePopup(this.classList[0])">
+                                        <iframe loading="lazy" src="https://www.youtube.com/embed/VRtaPkGgPBc"
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay7" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay7"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>Extract frames , select frames , delete frames , add image or text as water mark
+                                        to the video
+                                        and create video from images and sound clip</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--project-->
+                    <div class="out gui">
+                        <div class="in">
+                            <img class="project-img" src="./images/istockphoto-503425808-1024x1024.jpg" alt="">
+                            <div>
+                                <h3>Billiardo Simulation</h3>
+                                <span>C++ Programmer</span>
+                                <button onclick="showPopup(this.classList[1])"
+                                    class="popup-btn overlay8">about..</button>
+                            </div>
+                            <div class="details">
+                                <a href="https://github.com/Reem-99/billirdo_shoke_-rectilinear-motion_simulation_opengl"
+                                    target="_blank">
+                                    <img src="./icons/code-alt (1).png" alt=""></a>
+                                <!-- <button> -->
+                                <img src="./icons/eye (2).png" alt="" onclick="showPopup(this.classList[0])"
+                                    class="demo8">
+                                <div id="demo8" class="overlay ">
+                                    <div class="popup video-container" role="dialog" aria-modal="true">
+                                        <img src="./icons/x (3).png" alt="" class="demo8"
+                                            onclick="hidePopup(this.classList[0])">
+                                        <iframe loading="lazy"
+                                            src="https://www.youtube.com/embed/es0gMocI1cY?autoplay=1&mute=0"
+                                            title="YouTube video player"
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                            allowfullscreen>
+                                        </iframe>
+                                    </div>
+                                </div>
+                                <!-- </button> -->
+                            </div>
+                            <div id="overlay8" class="overlay">
+                                <div class="popup" role="dialog" aria-modal="true">
+                                    <img src="./icons/x (3).png" alt="" class="overlay8"
+                                        onclick="hidePopup(this.classList[0])">
+                                    <p>Simulating collision , applied forces and linear motion</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--contact section-->
+    <div class="footer" id="footer" name="footer">
+            <div class="contact">
+                <p>if you are intersted hiring me now !!</p>
+                <div class="social">
+                    <div>
+                    <img src="./icons/phone (1).png" alt="">
+                    <p>+963996558187</p>
+                </div>
+                <div>
+                    <a href="https://wa.me/+963996558187/"><img src="./icons/whatsapp (2).png" alt=""></a>
+                    <a href="https://wa.me/+963996558187/">whatsapp</a>
+                </div>
+                <div>
+                    <a href="mailto:reemghadban99@gmail.com"><img src="./icons/gmail (2).png" alt=""></a>
+                    <a href="mailto:reemghadban99@gmail.com">Gmail</a>
+                </div>
+                <div>
+                    <a href="https://github.com/Reem-99"><img src="./icons/github (2).png" alt=""></a>
+                    <a href="https://github.com/Reem-99">Github</a>
+                </div>
+            </div>
+            </div>
+            <p>copyright @ 2025 web designer Reem gh , All rights reserved</p>
+        </div>
+    </div>
+    <script>
+        let menu = document.getElementById("header_menue");
+        let toggleButton = document.getElementById("menue_icon");
+        let le = document.getElementsByClassName('le');
+        function toggleMenue() {
+            if (menu.style.maxHeight === "0px" || menu.style.maxHeight === "") {
+                menu.style.maxHeight = menu.scrollHeight + "px";
+                toggleButton.setAttribute('src', './icons/list-x (2).png');
+                for (let i = 0; i < le.length; i++) {
+                    let delay = i * 0.1;
+                    le[i].setAttribute('style', `transition-delay:${0.1 * i}s;`);
+                    console.log(le[i]);
+                    le[i].style.left = "0";
+                }
+            } else {
+                menu.style.maxHeight = "0px";
+                toggleButton.setAttribute('src', './icons/menu-close (2).png');
+                for (let i = 0; i < le.length; i++) {
+                    le[i].style.left = "-50%";
+                }
+            }
+        }
+
+        window.addEventListener("scroll", function () {
+            menu.style.maxHeight = "0px";
+            toggleButton.setAttribute('src', './icons/menu-close (2).png');
+            for (let i = 0; i < le.length; i++) {
+                le[i].style.left = "-50%";
+            }
+        });
+
+        let menuLinks = menu.querySelectorAll("a");
+        menuLinks.forEach(link => {
+            link.addEventListener("click", () => {
+                menu.style.maxHeight = "0px";
+                toggleButton.setAttribute('src', './icons/menu-close (2).png');
+                for (let i = 0; i < le.length; i++) {
+                    le[i].style.left = "-50%";
+                }
+            });
+        });
+        let skills = document.getElementById("skills");
+        let skillTitle = document.getElementsByClassName("skillTitle");
+        window.addEventListener("scroll", function () {
+            const position = skills.getBoundingClientRect();
+            let delay = 0;
+            for (let i = 0; i < skillTitle.length; i++) {
+                let pos = skillTitle[i].getBoundingClientRect();
+                if (pos.top < window.innerHeight && pos.bottom > 0) {
+                    skillTitle[i].setAttribute("style", `transition-delay:${delay}s;`);
+                    delay += 0.5;
+                    if (i % 2 == 0) {
+                        skillTitle[i].style.left = "0";
+                    }
+                    else {
+                        skillTitle[i].style.right = "0";
+                    }
+                }
+            }
+        });
+        function showPopup(id) {
+            const overlay = document.getElementById(id);
+            overlay.style.top = (window.scrollY - 60) + "px";
+            overlay.classList.add("show");
+        }
+
+        function hidePopup(id) {
+            const overlay = document.getElementById(id);
+            overlay.classList.remove("show");
+        }
+
+        let out = document.getElementsByClassName("out");
+        window.addEventListener("scroll", function () {
+            for (let i = 0; i < out.length; i++) {
+                let outPos = out[i].getBoundingClientRect();
+                if (outPos.top < window.innerHeight && outPos.bottom > 0) {
+                    out[i].style.transform = "unset";
+                }
+            }
+        });
+        
+        function filter(filter){
+            let filterType = document.getElementsByClassName("filter")[0];
+            let lifilter = document.getElementById(filter);
+                    document.getElementById("all").style.backgroundColor="unset";
+                    document.getElementById("frontend").style.backgroundColor="unset";
+                    document.getElementById("backend").style.backgroundColor="unset";
+                    document.getElementById("desktop").style.backgroundColor="unset";
+                    lifilter.style.backgroundColor = "#d90429";
+            
+            filterType.classList[1] = filter;
+            if(filter == "all"){
+                let Projects = document.getElementsByClassName("out");
+                for(let i=0; i<Projects.length;i++){
+                    Projects[i].style.display = "flex";
+                }
+            }
+            else if(filter == "frontend"){
+                let Projects = document.getElementsByClassName("out");
+                for(let i=0; i<Projects.length;i++){
+                    if(Projects[i].classList[1] != "front")
+                    Projects[i].style.display = "none";
+                    else
+                    Projects[i].style.display = "flex";
+                }
+            }
+            else if(filter == "backend"){
+                let Projects = document.getElementsByClassName("out");
+                for(let i=0; i<Projects.length;i++){
+                    if(Projects[i].classList[1] != "back")
+                    Projects[i].style.display = "none";
+                else
+                    Projects[i].style.display = "flex";
+                }
+            }
+            else if(filter == "desktop"){
+                let Projects = document.getElementsByClassName("out");
+                for(let i=0; i<Projects.length;i++){
+                    if(Projects[i].classList[1] != "gui")
+                    Projects[i].style.display = "none";
+                else
+                    Projects[i].style.display = "flex";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
